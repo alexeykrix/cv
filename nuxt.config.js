@@ -16,6 +16,9 @@ export default {
     ]
   },
 
+  ssr: false,
+  buildDir: 'build'
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/scss/index.scss'

@@ -1,6 +1,7 @@
 {
   "name": "brave",
   "version": "1.0.0",
+  "homepage": "https://alexeykrix.github.io/cv",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +10,9 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "lintfix": "npm run lint:js -- --fix"
+    "lintfix": "npm run lint:js -- --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
@@ -32,6 +35,7 @@
     "eslint": "^8.4.1",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
+    "gh-pages": "^5.0.0",
     "sass-loader": "10.1.1"
   }
 }
