@@ -1,0 +1,104 @@
+.underline {
+  position: relative;
+  &::after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: -4px;
+    width: 0;
+    left: 0%;
+    background-color: $color-white;
+    transition: 0.4s ease;
+  }
+  &.blue {
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+  &:hover {
+    @include min(1200) {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+main {
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: opacity 0.5s ;
+}
+
+.container {
+  width: 100%;
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.smoke {
+  color: $color-smoke;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.hide-line {
+  overflow: hidden;
+  transform-origin: 0% 50%;
+}
+.hide-word {
+  opacity: 0;
+  transform: translateY(105%);
+  transform-origin: 0% 50%;
+}
+
+.line-wrap {
+  overflow: hidden;
+  height: max-content;
+}
+.hide-line-title {
+  transform-origin: 0% 50%;
+}

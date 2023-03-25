@@ -1,0 +1,39 @@
+// @include font-face("NeueMontreal", "../fonts/PPNEUEMONTREAL-MEDIUM", 500);
+// @include font-face("NeueMontrealBold", "../fonts/PPNEUEMONTREAL-BOLD", 600);
+// @include font-face("RightGrotesk", "../fonts/PPRIGHTGROTESK-COMPACTDARK", 800);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+h1, .h1 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #fff;
+	text-transform: uppercase;
+}
+h2, .h2 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+}
+h3, h3 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+p, .p {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	color: #fff;
+}

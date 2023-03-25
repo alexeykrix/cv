@@ -1,0 +1,113 @@
+//fonts
+
+$font-main: 'Euclid Circular B';
+$font-addition: 'PP Formula Condensed';
+$font-weight: 400;
+$font-size: 12px;
+$line-height: 14.4px;
+$letter-spacing: 0.02em;
+
+//transitions
+
+
+$transition: 0.5s ease-in-out;
+$transition-300: 0.3s ease-in-out;
+
+//colors
+
+$color-nero: #1a1a1a;
+$color-white: #ffffff;
+$color-smoke: #E4E4E4;
+$color-blue: #0086FF;
+$color-yellow: #FFEA32;
+
+
+//layout width
+
+$layout-width: 1440;
+
+//grid padding
+
+$grid-padding: 24px;
+
+//breakpoints max
+
+$breakpoints-max: (
+  xs: 767,
+  sm: 1023,
+  md: 1279,
+  bg: 1439,
+  lg: 1919
+);
+
+//breakpoints min
+
+$breakpoints-min: (
+  xxs: 320,
+  xs: 768,
+  sm: 1024,
+  md: 1280,
+  bg: 1440,
+  lg: 1920
+);
+
+//offsets
+
+$offsets: (
+  aquamarine: (
+    lg: 144px, // > 1920
+    md: 120px, // < 1920
+    bg: 104px, // < 1440
+    sm: 104px, // < 1024
+    xs: 80px, // < 768
+  ),
+  crimson: (
+    lg: 72px,
+    md: 72px,
+    bg: 72px,
+    sm: 72px,
+    xs: 72px,
+  ),
+  blueviolet: (
+    lg: 80px,
+    md: 64px,
+    bg: 54px,
+    sm: 48px,
+    xs: 40px,
+  ),
+  coral: (
+    lg: 56px,
+    md: 48px,
+    bg: 40px,
+    sm: 40px,
+    xs: 32px,
+  ),
+  cornflowerblue: (
+    lg: 40px,
+    md: 32px,
+    bg: 32px,
+    sm: 32px,
+    xs: 24px,
+  ),
+  darkgreen: (
+    lg: 32px,
+    md: 24px,
+    bg: 24px,
+    sm: 24px,
+    xs: 16px,
+  ),
+  thistle: (
+    lg: 24px,
+    md: 16px,
+    bg: 16px,
+    sm: 16px,
+    xs: 11px,
+  ),
+  antiquewhite: (
+    lg: 10px,
+    md: 8px,
+    bg: 8px,
+    sm: 8px,
+    xs: 8px,
+  ),
+);

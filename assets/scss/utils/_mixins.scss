@@ -1,0 +1,63 @@
+//mixin for fonts
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.woff2');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// mixins for adaptives
+
+@mixin max($size) {
+    @if map-has-key($breakpoints-max, $size) {
+        @media (max-width: #{map-get($breakpoints-max, $size)}px) {
+            @content;
+        }
+    } @else {
+        @media (max-width: #{$size}px) {
+            @content;
+        }
+    }
+}
+
+@mixin min($size) {
+    @if map-has-key($breakpoints-min, $size) {
+        @media (min-width: #{map-get($breakpoints-min, $size)}px) {
+            @content;
+        }
+    } @else {
+        @media (min-width: #{$size}px) {
+            @content;
+        }
+    }
+}
+
+
+// mixin offsets 
+
+@function foffset($color, $min-viewport) {
+  $color-map: map-get($offsets, $color);
+  @if map-has-key($color-map, $min-viewport) {
+    @return map-get($color-map, $min-viewport);
+  }
+}
+
+@mixin offset-media($prop, $color) {
+  #{$prop}: foffset($color, md);
+  @media screen and (min-width: #{map-get($breakpoints-min, lg)}px) {
+    #{$prop}: foffset($color, lg);
+  }
+  @media screen and (max-width: #{map-get($breakpoints-max, bg)}px) {
+    #{$prop}: foffset($color, bg);
+  }
+  @media screen and (max-width: #{map-get($breakpoints-max, sm)}px) {
+    #{$prop}: foffset($color, sm);
+  }
+  @media screen and (max-width: #{map-get($breakpoints-max, xs)}px) {
+    #{$prop}: foffset($color, xs);
+  }
+}
